@@ -1,0 +1,30 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --primary-dark-green: #1b4332;
+  --secondary-green: #2d6a4f;
+  --light-green: #40916c;
+  --accent-green: #52b788;
+  --pale-green: #b7e4c7;
+  --leaf-shadow: rgba(43, 106, 79, 0.4);
+  --correct-green: #74c69d;
+  --highlight-green: rgba(82, 183, 136, 0.3);
+}
+
+body {
+  font-family: Arial, sans-serif;
+  min-height: 100vh;
+  background: var(--primary-dark-green);
+  color: #ffffff;
+  overflow-x: hidden;
+}
+
+#root {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}

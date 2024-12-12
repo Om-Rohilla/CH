@@ -1,0 +1,182 @@
+.app {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #1a1a2e, #16213e);
+  padding: 2rem;
+  color: #fff;
+}
+
+.title {
+  text-align: center;
+  font-size: 3rem;
+  margin-bottom: 2rem;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  text-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+  animation: glow 2s ease-in-out infinite alternate;
+}
+
+@keyframes glow {
+  from {
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+  }
+  to {
+    text-shadow: 0 0 20px rgba(255, 255, 255, 0.5),
+                 0 0 30px rgba(255, 255, 255, 0.3);
+  }
+}
+
+.start-button {
+  display: block;
+  margin: 2rem auto;
+  padding: 1rem 3rem;
+  font-size: 1.5rem;
+  background: transparent;
+  border: 2px solid #fff;
+  color: #fff;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  transform-style: preserve-3d;
+  perspective: 1000px;
+}
+
+.start-button:hover {
+  transform: translateY(-5px) rotateX(10deg);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.game-container {
+  display: flex;
+  justify-content: space-between;
+  max-width: 1400px;
+  margin: 0 auto;
+  gap: 2rem;
+  perspective: 1000px;
+}
+
+.game-center {
+  flex: 2;
+  transform-style: preserve-3d;
+  animation: float 6s ease-in-out infinite;
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+.left-questions,
+.right-questions {
+  flex: 1;
+  background: rgba(255, 255, 255, 0.1);
+  padding: 2rem;
+  border-radius: 15px;
+  backdrop-filter: blur(10px);
+  transition: transform 0.3s ease;
+}
+
+.left-questions:hover,
+.right-questions:hover {
+  transform: scale(1.02);
+}.app {
+  min-height: 100vh;
+  background: linear-gradient(135deg, var(--primary-dark-green), var(--secondary-green));
+  padding: 2rem;
+  color: #fff;
+}
+
+.title {
+  text-align: center;
+  font-size: 3rem;
+  margin-bottom: 2rem;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  text-shadow: 0 0 10px var(--leaf-shadow);
+  animation: glow 2s ease-in-out infinite alternate;
+  color: var(--pale-green);
+}
+
+.title::before,
+.title::after {
+  content: '';
+  font-size: 2rem;
+  margin: 0 1rem;
+  opacity: 0.8;
+}
+
+.start-button {
+  display: block;
+  margin: 2rem auto;
+  padding: 1rem 3rem;
+  font-size: 1.5rem;
+  background: var(--light-green);
+  border: 2px solid var(--pale-green);
+  color: #fff;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  transform-style: preserve-3d;
+  perspective: 1000px;
+}
+
+.start-button:hover {
+  transform: translateY(-5px) rotateX(10deg);
+  box-shadow: 0 10px 20px var(--leaf-shadow);
+  background: var(--accent-green);
+}
+
+.game-container {
+  display: flex;
+  justify-content: space-between;
+  max-width: 1400px;
+  margin: 0 auto;
+  gap: 2rem;
+  perspective: 1000px;
+}
+
+.game-center {
+  flex: 2;
+  transform-style: preserve-3d;
+  animation: float 6s ease-in-out infinite;
+}
+
+.left-questions,
+.right-questions {
+  flex: 1;
+  background: rgba(64, 145, 108, 0.2);
+  padding: 2rem;
+  border-radius: 15px;
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(183, 228, 199, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.left-questions:hover,
+.right-questions:hover {
+  transform: scale(1.02);
+  background: rgba(64, 145, 108, 0.3);
+}
+
+@keyframes glow {
+  from {
+    text-shadow: 0 0 10px var(--leaf-shadow);
+  }
+  to {
+    text-shadow: 0 0 20px var(--accent-green),
+                 0 0 30px var(--light-green);
+  }
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}

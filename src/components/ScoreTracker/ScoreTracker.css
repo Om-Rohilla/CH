@@ -1,0 +1,64 @@
+.score-tracker {
+    margin-top: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+  }
+  
+  .score {
+    background: rgba(64, 145, 108, 0.2);
+    padding: 1rem 2rem;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transform-style: preserve-3d;
+    transition: transform 0.3s ease;
+    border: 1px solid rgba(183, 228, 199, 0.1);
+  }
+  
+  .score:hover {
+    transform: translateZ(20px);
+  }
+  
+  .score-label {
+    font-size: 1rem;
+    color: rgba(255, 255, 255, 0.7);
+    letter-spacing: 0.2em;
+  }
+  
+  .score-value {
+    font-size: 3rem;
+    font-weight: bold;
+    color: #fff;
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+  }
+  
+  .score.scoring {
+    animation: score-pulse 0.5s ease-out;
+  }
+  
+  .score-stars {
+    display: flex;
+    gap: 0.5rem;
+  }
+  
+  .star {
+    font-size: 2rem;
+    color: #ffd700;
+    animation: star-pop 0.5s ease-out;
+    text-shadow: 0 0 10px rgba(255, 215, 0, 0.5);
+  }
+  
+  @keyframes score-pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.1); }
+    100% { transform: scale(1); }
+  }
+  
+  @keyframes star-pop {
+    0% { transform: scale(0); }
+    50% { transform: scale(1.2); }
+    100% { transform: scale(1); }
+  }
